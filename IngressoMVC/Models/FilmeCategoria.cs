@@ -7,6 +7,11 @@ namespace IngressoMVC.Models
 {
     public class FilmesCategoria 
     {
+        public FilmesCategoria(int filmeId, int categoriaId)
+        {
+            FilmeId = filmeId;
+            CategoriaId = categoriaId;
+        }
         //Filmes
         public int FilmeId { get; set; }
         public Filme Filme { get; set; }
