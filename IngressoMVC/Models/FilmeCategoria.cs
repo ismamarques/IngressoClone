@@ -12,10 +12,15 @@ namespace IngressoMVC.Models
             FilmeId = filmeId;
             CategoriaId = categoriaId;
         }
+
+
         //Filmes
+        [key]
         public int FilmeId { get; set; }
         public Filme Filme { get; set; }
 
+
+        [key]
         // Categoria 
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }

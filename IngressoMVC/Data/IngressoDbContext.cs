@@ -15,12 +15,29 @@ namespace IngressoMVC.Data
             
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<AtorFilme>().HasKey(af => new 
+            {
+            af.AtorId,
+            af.FilmeId
+            });
+        
+        
+            modelBuilder.Entity<FilmesCategoria>().HasKey(fc => new
+            {
+                fc.FilmeId,
+                fc.CategoriaId
+            });
+
+        }               
+
 
         public DbSet<Filme> Filmes { get; set; }
         public DbSet<Artista> Artistas { get; set; }
         public DbSet<Ator>Atores { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
-        public DbSet<AtorFilme> AtorFilmes { get; set; }
+        public DbSet<AtorFilme> AtoresFilmes { get; set; }
         public DbSet<Cinema> Cinemas { get; set; }
         public DbSet<FilmesCategoria> FilmesCategorias { get; set; }
         public DbSet<Produtor> Produtores { get; set; }

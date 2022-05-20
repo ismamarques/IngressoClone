@@ -8,6 +8,13 @@ namespace IngressoMVC.Models
 {
     public class Cinema : IEntidade
     {
+        public Cinema(string nome, string descricao, string logoURL)
+        {
+            Nome = nome;
+            Descricao = descricao;
+            LogoURL = logoURL;
+        }
+
         public int Id { get; set; }
         public DateTime DataCadastro { get; set; }
         public DateTime DataAlteracao { get; set; }
