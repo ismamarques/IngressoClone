@@ -1,29 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace IngressoMVC.Models
 {
-    public class FilmesCategoria 
+    public class FilmeCategoria
     {
-        public FilmesCategoria(int filmeId, int categoriaId)
+        public FilmeCategoria(int filmeId, int categoriaId)
         {
             FilmeId = filmeId;
             CategoriaId = categoriaId;
         }
 
-
-        //Filmes
-        [key]
+        [Key]
         public int FilmeId { get; set; }
         public Filme Filme { get; set; }
 
-
-        [key]
-        // Categoria 
+        [Key]
         public int CategoriaId { get; set; }
         public Categoria Categoria { get; set; }
-        
     }
 }

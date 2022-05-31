@@ -24,7 +24,7 @@ namespace IngressoMVC.Data
             });
         
         
-            modelBuilder.Entity<FilmesCategoria>().HasKey(fc => new
+            modelBuilder.Entity<FilmeCategoria>().HasKey(fc => new
             {
                 fc.FilmeId,
                 fc.CategoriaId
@@ -39,7 +39,7 @@ namespace IngressoMVC.Data
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<AtorFilme> AtoresFilmes { get; set; }
         public DbSet<Cinema> Cinemas { get; set; }
-        public DbSet<FilmesCategoria> FilmesCategorias { get; set; }
+        public DbSet<FilmeCategoria> FilmesCategorias { get; set; }
         public DbSet<Produtor> Produtores { get; set; }
 
     }
