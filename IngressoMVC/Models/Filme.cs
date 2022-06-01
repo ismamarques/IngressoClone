@@ -46,7 +46,7 @@ namespace IngressoMVC.Models
 
         public void AlteraPreco(decimal novoPreco)
         {
-            if (novoPreco < 0)
+            if(novoPreco < 0)
             {
                 return;
             }

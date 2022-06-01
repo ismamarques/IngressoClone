@@ -18,13 +18,14 @@ namespace IngressoMVC.Data
 
                 context.Database.EnsureCreated();
 
-                if (!context.Cinemas.Any())
+                if(!context.Cinemas.Any())
                 {
                     context.Cinemas.Add(new Cinema
                         ("Cinemark", "Texto desc..", "https://cdn.freebiesupply.com/logos/large/2x/cinemark-1-logo-png-transparent.png"));
+                    context.SaveChanges();
                 }
 
-                if (!context.Atores.Any())
+                if(!context.Atores.Any())
                 {
                     context.Atores.AddRange(new List<Ator>()
                     {
@@ -32,6 +33,7 @@ namespace IngressoMVC.Data
                         new Ator("Henry Cavill", "Bio desc...", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/hErUwonrQgY5Y7RfxOfv8Fq11MB.jpg"),
                         new Ator("Gal Gadot", "Bio desc...", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/plLfB60M5cJrnog8KvAKhI4UJuk.jpg")
                     });
+                    context.SaveChanges();
                 }
 
                 if (!context.Produtores.Any())
@@ -42,9 +44,10 @@ namespace IngressoMVC.Data
                         new Produtor("Martin Scorsese", "Bio desc...", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/9U9Y5GQuWX3EZy39B8nkk4NY01S.jpg"),
                         new Produtor("Tim Burton", "Bio desc...", "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/gRM4lGpiBINAyiXaxEeJFDKzmge.jpg")
                     });
+                    context.SaveChanges();
                 }
 
-                if (!context.Categorias.Any())
+                if(!context.Categorias.Any())
                 {
                     context.Categorias.AddRange(new List<Categoria>()
                     {
@@ -54,18 +57,20 @@ namespace IngressoMVC.Data
                         new Categoria("Romance"),
                         new Categoria("Terror")
                     });
+                    context.SaveChanges();
                 }
 
-                if (!context.Filmes.Any())
+                if(!context.Filmes.Any())
                 {
                     context.Filmes.AddRange(new List<Filme>()
                     {
                         new Filme("Liga da Justiça", "Impulsionado pela restauração de sua fé na humanidade e inspirado pelo ato altruísta do Superman, Bruce Wayne convoca sua nova aliada Diana Prince para o combate contra um inimigo ainda maior, recém-despertado. ", 20, "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/geyu6rplpbp7OUeOfB2uRVf1LpG.jpg", 1, 1),
-                        new Filme("Sherlock Holmes: O Jogo de Sombras", "Filme desc...", 20, "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/of8oht9uENwEdx35HehEPUhGC2w.jpg", 2, 1)
+                        new Filme("Sherlock Holmes: O Jogo de Sombras", "Filme desc...", 20, "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/of8oht9uENwEdx35HehEPUhGC2w.jpg", 1, 2)
                     });
+                    context.SaveChanges();
                 }
 
-                if (!context.FilmesCategorias.Any())
+                if(!context.FilmesCategorias.Any())
                 {
                     context.FilmesCategorias.AddRange(new List<FilmeCategoria>()
                     {
@@ -76,9 +81,10 @@ namespace IngressoMVC.Data
                         new FilmeCategoria(2, 4),
                         new FilmeCategoria(2, 5)
                     });
+                    context.SaveChanges();
                 }
 
-                if (!context.AtoresFilmes.Any())
+                if(!context.AtoresFilmes.Any())
                 {
                     context.AtoresFilmes.AddRange(new List<AtorFilme>()
                     {
@@ -86,6 +92,7 @@ namespace IngressoMVC.Data
                         new AtorFilme(2, 1),
                         new AtorFilme(3, 1)
                     });
+                    context.SaveChanges();
                 }
             }
         }
